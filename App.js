@@ -1,12 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-import { ScrollView } from 'react-native-web';
 import React,{useState} from 'react';
+import {Text, View, TextInput, Button, StyleSheet} from 'react-native';
 
-export default function App() {
+export default function App(){
 
   const [n1, setN1] = useState()
-  const [n2, setN2] = useSTate()
+  const [n2, setN2] = useState()
+  const [resultado, setResultado] = useState()
 
   const somar = ()=>{
     const r = parseInt(n1) + parseInt(n2)
@@ -62,10 +61,33 @@ export default function App() {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  tudo: {
+    backgroundColor:'#000',
+    height: '100%',
+    width:'100%'
   },
+
+  titulo: {
+    color:'#00f',
+    fontSize:25,
+    textAlign:'center',
+    marginTop:25,
+    marginBottom:10
+  },
+
+  caixaDeTexto:{
+    borderWidth:1,
+    borderColor:'#0ff',
+    color:'#0ff',
+    borderRadius:40,
+    paddingLeft:25,
+    height:60
+  },
+
+  resposta:{
+    color:'#fff',
+    fontSize:25,
+    textAlign:'center',
+    marginTop:30
+  }
 });
