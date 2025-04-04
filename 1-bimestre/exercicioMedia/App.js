@@ -15,11 +15,10 @@ export default function App(){
     setResultado(r)
 
     if(resultado < 6){
-      const texto = 'Aprovado'
+      setAprovar('Reprovado')
     }else{
-      const texto = 'reprovado'
+      setAprovar('Aprovado')
     }
-    setAprovar(texto)
   }
 
   return (
