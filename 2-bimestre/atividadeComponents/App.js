@@ -1,21 +1,38 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import { Header } from './src./components/Header.js';
-import { Cardapio } from './src./components/Cardapio.js'
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
+
+import Header from './components/Header.js';
+import Cardapio from './components/Cardapio.js';
+import { ScrollView } from 'react-native-web';
 
 export default function App() {
   return (
-    <View style={styles.tudo}>
+    <ScrollView>
+      <View style={styles.container}>
 
-      <Header/>
+        <Header/>
 
-      <Cardapio/>
+        <Cardapio/>
 
-    </View>
+      </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  containerRow: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
   tudo: {
     backgroundColor:'#fff',
   },
