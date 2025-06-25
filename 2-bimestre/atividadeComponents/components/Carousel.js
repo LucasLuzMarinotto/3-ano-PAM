@@ -7,6 +7,7 @@ export default function carousel() {
         <FlatList 
          data={imageSlider}
          renderItem={({item,index}) => <SliderItem item={item} index={index}
+         horizontal
          />
     </View>
   );
