@@ -10,10 +10,10 @@ export default function App() {
     <ScrollView>
       <View style={styles.container}>
 
-        <Carousel/>
-
         <Header/>
 
+        <Carousel/>
+    
         <Cardapio/>
 
       </View>
