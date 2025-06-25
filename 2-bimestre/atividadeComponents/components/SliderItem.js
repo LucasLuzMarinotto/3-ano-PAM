@@ -7,10 +7,12 @@ type Props = {
   item: ImageSliderType;
   index: number;
 }
+// pegar as dimensões espaciais da tela
+const {widht} = dimensions.get('screen');
 
 const SliderItem = ({item, index}: Props) =>{
   return(
-    <View>
+    <View style={estiloItens.itemContainer>
       <Image source={item.image} style={{width: 300, height: 500}}/>
       <Text>{item.title}</Text>
     </View>
@@ -18,4 +20,9 @@ const SliderItem = ({item, index}: Props) =>{
 
 export default SlideItem
 
-const style = StyleSheet.create({})
+const estiloIntens = StyleSheet.create({
+  justifyContent: 'center',
+  alignItens:'center',
+  gap: 20,
+  widht: widht
+})
