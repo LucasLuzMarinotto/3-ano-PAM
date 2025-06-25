@@ -1,12 +1,12 @@
 import{ ImageSourcePropsType } from "react-native";
 
-type ImageSliderType = {
+export type ImageSliderType = {
     title: string;
     image: ImageSourcePropsType;
     description: string;
 };
 
-const ImageSlider = [
+export const ImageSlider = [
     {
       title: 'imagem1',
       image: require('@/src/imagens/img_carousel.png'),
