@@ -18,7 +18,7 @@ const SliderItem = ({item, index}: Props) =>{
     </View>
 }
 
-export default SlideItem
+export default SliderItem
 
 const estiloIntens = StyleSheet.create({
   justifyContent: 'center',
