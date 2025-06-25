@@ -1,10 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 
-export default function Cardapio() {
+export default function carousel() {
   return (
     <View>
-        <FlatList data={imageSlider}/>
+        <FlatList 
+         data={imageSlider}
+         renderItem={({item,index}) => <SliderItem item={item} index={index}
+         />
     </View>
   );
 }
