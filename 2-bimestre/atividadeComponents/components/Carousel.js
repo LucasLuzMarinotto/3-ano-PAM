@@ -4,7 +4,7 @@ import { StyleSheet, Text, View } from 'react-native';
 export default function Cardapio() {
   return (
     <View>
-        <FlatList data={imagensSlider}/>
+        <FlatList data={imageSlider}/>
     </View>
   );
 }
