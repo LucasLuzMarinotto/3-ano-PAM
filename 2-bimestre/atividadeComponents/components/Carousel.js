@@ -8,6 +8,8 @@ export default function carousel() {
          data={imageSlider}
          renderItem={({item,index}) => <SliderItem item={item} index={index}
          horizontal
+         showHorizontalScrollIndicator={false}
+         pagingEnabled
          />
     </View>
   );
