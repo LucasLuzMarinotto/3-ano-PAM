@@ -3,11 +3,10 @@ import { ScrollView, StyleSheet, Text, View } from 'react-native';
 
 import Header from './components/Header.js';
 import Cardapio from './components/Cardapio.js';
-import { ScrollView } from 'react-native-web';
+import Carousel from './components/Carousel.js'
 
 export default function App() {
   return (
-    <ScrollView>
       <View style={styles.container}>
 
         <Header/>
@@ -17,7 +16,6 @@ export default function App() {
         <Cardapio/>
 
       </View>
-    </ScrollView>
   );
 }
 
@@ -37,6 +35,13 @@ const styles = StyleSheet.create({
   },
   tudo: {
     backgroundColor:'#fff',
+  },
+
+  itemContainer: {
+    justifyContent: 'center',
+    alignItens:'center',
+    gap: 20,
+    widht: widht
   },
 
   textoPequeno:{

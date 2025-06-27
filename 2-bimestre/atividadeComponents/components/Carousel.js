@@ -1,19 +1,24 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, FlatList } from 'react-native';
+import React from 'react';
+import { ImageSlider } from '../data/SliderData.tsx';
+import { SliderItem } from './SliderItem';
 
-export default function carousel() {
+export default function Carousel() {
   return (
     <View>
         <FlatList 
-         data={imageSlider}
-         renderItem={({item,index}) => <SliderItem item={item} index={index}
-         horizontal
-         showHorizontalScrollIndicator={false}
-         pagingEnabled
-         />
+        data={ImageSlider}
+        renderItem={({item,index}) => (
+          <SliderItem item={item} />
+        )}
+        horizontal
+        showHorizontalScrollIndicator={false}
+        pagingEnabled
+        />
     </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
   container: {
