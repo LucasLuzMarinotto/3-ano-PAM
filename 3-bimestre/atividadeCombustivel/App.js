@@ -2,17 +2,24 @@ import { StatusBar } from 'expo-status-bar';
 import React,{useState} from 'react';
 import {Text, View, TextInput, Button, StyleSheet} from 'react-native';
 
-const [valorAlcool, setValorAlcool] = useState()
-const [valorGasolina, setValorGasolina] = useState()
-const [melhorCombustivel, setMelhorCombustivel] = useState()
-var tipoCombustivel='oi';
+export default function App() {
+
+const [valorAlcool, setValorAlcool] = useState('')
+const [valorGasolina, setValorGasolina] = useState('')
+const [melhorCombustivel, setMelhorCombustivel] = useState('')
+const [tipoCombustivel, setTipoCombustivel] = useState('')
 
 const verificar = ()=>{
-  const r = valorAlcool / valorGasolina
-  setMelhorCombustivel(r)
+  const r = parseFloat(valorAlcool) / parseFloat(valorGasolina)
+  setMelhorCombustivel(r.toFixed(2));
+
+  if (r >= 0.7) {
+    setTipoCombustivel('Gasolina');
+  } else {
+    setTipoCombustivel('Álcool');
+  }
 }
 
-export default function App() {
   return (
     <View style={styles.container}>
       <View>
@@ -24,6 +31,7 @@ export default function App() {
             style={styles.caixaDeTexto}
             placeholder='Digite aqui o valor do álcool'
             placeholderTextColor='#000'
+            keyboardType='numeric'
 
             onChangeText ={text => setValorAlcool(text)}
           />
@@ -32,6 +40,7 @@ export default function App() {
             style={styles.caixaDeTexto}
             placeholder='Digite aqui o valor da gasolina'
             placeholderTextColor='#000'
+            keyboardType='numeric'
 
             onChangeText ={text => setValorGasolina(text)}
           />
@@ -43,10 +52,9 @@ export default function App() {
         onPress= {()=>verificar()}
         />
 
-        <Text>O combustível que valerá mais a pena é o {tipoCombustivel} que é R${melhorCombustivel} mais barato</Text>
+        <Text>O combustível que vale mais a pena é: {tipoCombustivel} Índice: {melhorCombustivel}</Text>
       </View>
 
-      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
     </View>
   );
