@@ -30,7 +30,7 @@ const verificar = ()=>{
           <TextInput
             style={styles.caixaDeTexto}
             placeholder='Digite aqui o valor do álcool'
-            placeholderTextColor='#000'
+            placeholderTextColor='#b5b5b5'
             keyboardType='numeric'
 
             onChangeText ={text => setValorAlcool(text)}
@@ -39,7 +39,7 @@ const verificar = ()=>{
           <TextInput
             style={styles.caixaDeTexto}
             placeholder='Digite aqui o valor da gasolina'
-            placeholderTextColor='#000'
+            placeholderTextColor='#b5b5b5'
             keyboardType='numeric'
 
             onChangeText ={text => setValorGasolina(text)}
